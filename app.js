@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 // middleware or to set router
-app.use("/api/projects", products_routes);
+app.use("/api/products", products_routes);
 
 const start = async () => {
     try {
