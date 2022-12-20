@@ -45,7 +45,8 @@ const getAllProducts = async (req, res) => {
     // console.log(queryObject);
     try {
         const Products = await apiData;
-        res.status(200).json({ Products })
+        res.status(200).json({ Products, nbHits: Products.length });
+        // res.status(200).json({ Products })
     } catch (error) {
         res.status(404).json("Bad request");
         console.log(error)
